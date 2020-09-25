@@ -1,5 +1,3 @@
-
-
 import django-heroku
 import os
 import environ
