@@ -75,7 +75,14 @@ document.write(d.getFullYear())
         {% else %}
 
             <tr class="table-danger row">
-            <td class="col-7" >{{obj.task}}</td>
+            <td class="col-7" >{{obj.task}}<script type="text/javascript">
+var d = new Date()
+document.write(d.getDate())
+document.write("/")
+document.write(d.getMonth() + 1)
+document.write("/")
+document.write(d.getFullYear())
+</script></td>
             <td class="col-3"><a href="{% url 'complete_task' obj.id %}"><button type="button" class="btn btn-outline-primary">Mark This Completed</button>
 </a></td>
             <td class="col-1"><a href="{% url 'edit_task' obj.id %}"><button type="button" class="btn btn-outline-success">EDIT</button>
